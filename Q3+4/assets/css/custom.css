@@ -1,0 +1,44 @@
+/* navbar */
+.sidebar {
+    height: 100vh;
+    background:rgba(167,226,238);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 5px 7px 25px #999;
+}
+
+.sidebar-link:hover {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.bottom-border {
+    border-bottom: 1px groove rgb(202, 199, 199);
+}
+
+/* navbar end */
+
+/* "Eat right..." */
+.italics-color {
+    font-style: italic;
+    color: #8cbdf2;
+  }
+
+/* cold and hot deli bars */
+.top-navbar {
+    background:rgba(167,226,238);
+}
+
+/* cards */
+.card-common {
+    box-shadow: 1px 2px 5px #999;
+    transition: all .4s;
+}
+
+.card-common:hover {
+    box-shadow: 2px 3px 15px #999;
+    transform: translateY(-1px);
+}
+/* end of cards */
+

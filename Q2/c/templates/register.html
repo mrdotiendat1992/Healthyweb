@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+<body>
+  {% block mainblock %}
+  <div class="col-xl-10 col-lg-9 col-md-8 ml-auto bg-info fixed-top py-2 top-navbar" style="margin-left: 15px;">
+    <div class="row align-items-center">
+      <div class="col">
+        <h4 class="text-black-50 text-uppercase mb-0">Register</h4>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+    <h1>Register</h1>
+    {% if message %}<h3 id="message">{{message}}</h3>{% endif %}
+  <form action="/register" method="POST">
+    <div class="form-group">
+      <label for="name">Username</label>
+      <input type="text" class="form-control" id="name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" name="password">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="dob">Date of Birth</label>
+      <input type="date" class="form-control" id="dob" name="dob">
+    </div>
+    <div class="form-group" style="margin-left: 30px">
+        <input type="checkbox" class="form-check-input" id="handicapped" name="handicapped">
+        <label class="form-check-label" for="handicapped">Handicapped</label>
+    </div>
+    <div class="submitButtonDiv">  
+        <button type="submit" class="btn btn-secondary" id="submitButton">Submit</button>
+    </div>
+  </form>
+  </div>
+  {% endblock %}
+</body>

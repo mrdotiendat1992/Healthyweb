@@ -1,0 +1,3 @@
+C001,Smoked Duck Salad,3.0,12.5,23,15,16,https://picniclifestyle.com/wpcontent/uploads/2020/10/Grilled-pear-salad-6.jpg
+H001,Croissant,2.0,15,26.7,4.6,Baking,https://3.bp.blogspot.com/-
+HMLcbz567qg/TlgWSbpD1uI/AAAAAAAACgM/1xnYGFTZemE/s1600/croissant.JPG

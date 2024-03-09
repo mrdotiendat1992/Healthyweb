@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+<body>
+  {% block mainblock %}
+  <!-- cold deli navigation -->
+  <!-- top-nav -->
+  <div class="col-xl-10 col-lg-9 col-md-8 ml-auto bg-info fixed-top py-2 top-navbar" style="margin-left: 15px;">
+    <div class="row align-items-center">
+      <div class="col">
+        <h4 class="text-black-50 text-uppercase mb-0">CHOICE OF HOT AND COLD DELIS</h4>
+      </div>
+      <div class="col text-right">
+        <a href="/logout">Logout<i class="fas fa-sign-out-alt mr-2"></i></a>
+      </div>
+    </div>
+  </div>
+  <!-- end of top-nav -->
+  <div class="col-xl-10 col-lg-9 col-md-8 ml-auto bg-info py-2 mt-5 second-bar">
+    <div class="row align-items-center">
+      <div class="col-md-4">
+        <h4 class="text-black-50 text-uppercase mb-0">Cold Delis</h4>
+      </div>
+    </div>
+  </div>
+  <!-- end of cold deli navigation -->
+  <h1></h1>
+
+  <!-- cold deli cards -->
+  <section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+          <div class="row pt-md-5 ml-md-3 mt-md-3 mb-5">
+            {% for deli in cold_delis %}
+              <div class="col-xl-4 col-md-6 col-sm-12 p-2">
+                <div class="card card-common h-100">
+                  <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                    <img src="{{deli.url}}" class="img-fluid" style="max-width: 50%;" />
+                    <a href="delis/{{deli.deliCode}}">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">{{deli.deliCode}}</h5>
+                    <p class="card-text">{{deli.name}}</p>
+                    <p class="card-text">Price: ${{deli.price}}</p>
+                    <p class="card-text">Fat: {{deli.fat}}</p>
+                    <p class="card-text">Calories: {{deli.calories}}</p>
+                    <p class="card-text">Expiry Hours: {{deli.expiryhours}}</p>
+                  </div>
+                </div>
+              </div>
+          {% endfor %}
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- end of cold deli cards -->
+
+  <!-- hot deli navigation -->
+  <div class="col-xl-10 col-lg-9 col-md-8 ml-auto bg-info py-2 third-bar">
+    <div class="row align-items-center">
+      <div class="col-md-4">
+        <h4 class="text-black-50 text-uppercase mb-0">Hot Delis</h4>
+      </div>
+    </div>
+  </div>
+  <!-- end of hot deli navigation -->
+
+  <!-- hot deli cards -->
+  <section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+          <div class="row pt-md-5 ml-md-3 mt-md-3 mb-5">
+            {% for deli in hot_delis %}
+            <div class="col-xl-4 col-md-6 col-sm-12 p-2">
+              <div class="card card-common h-100">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                  <img src="{{deli.url}}" class="img-fluid" style="max-width: 50%;" />
+                  <a href="delis/{{deli.deliCode}}">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{deli.deliCode}} {{deli.name}}</h5>
+                  <p class="card-text">Cooking Style: {{deli.cookingstyle}}</p>
+                  <p class="card-text">Price: ${{deli.price}}</p>
+                  <p class="card-text">Fat: {{deli.fat}}</p>
+                  <p class="card-text">Calories: {{deli.calories}}</p>
+                  <p class="card-text">Expiry Hours: {{deli.expiryhours}}</p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- end of hot deli cards -->
+  {% endblock %}
+</body>
+
+</html>
